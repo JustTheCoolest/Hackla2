@@ -29,3 +29,21 @@ As environmental concerns grow, understanding and mitigating our carbon footprin
 To use the Carbon Footprint Calculator, you need the following:
 
 * Python (version 3.x)
+
+## Usage
+
+Upon running the application, you will be prompted to provide information about your food consumption habits, such as the types and quantities of different food items.
+After entering your food consumption data, the calculator will ask for details regarding your transportation habits, including the mode of transport and distances traveled.
+Once you have provided all the necessary information, the calculator will compute your carbon footprint by considering the CO<sub>2</sub> emissions associated with your diet and transportation.
+The calculator will display the results, including your total carbon footprint and suggestions for reducing emissions.
+You can repeat the process to calculate the carbon footprint for different scenarios or make adjustments to your inputs.
+
+## Contributing
+
+Contributions to the Carbon Footprint Calculator are welcome! If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your changes to your forked repository.
+5. Submit a pull request describing your changes.
