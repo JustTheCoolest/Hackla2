@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Optional: Add some basic styling to the dropdown menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown">
+    <input type="text" id="searchInput" placeholder="Search...">
+    <div class="dropdown-content" id="dropdownOptions">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+      <option value="option5">Option 5</option>
+    </div>
+  </div>
+
+  <script>
+    // Get the input element and dropdown options
+    var searchInput = document.getElementById('searchInput');
+    var dropdownOptions = document.getElementById('dropdownOptions').getElementsByTagName('option');
+
+    // Add event listener to the input for real-time filtering
+    searchInput.addEventListener('input', function() {
+      var filter = searchInput.value.toLowerCase();
+      for (var i = 0; i < dropdownOptions.length; i++) {
+        var optionText = dropdownOptions[i].text.toLowerCase();
+        if (optionText.includes(filter)) {
+          dropdownOptions[i].style.display = '';
+        } else {
+          dropdownOptions[i].style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
